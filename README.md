@@ -18,8 +18,8 @@ Please make sure that you have docker installed on your system before continuing
 
 ## Instructions
 
-1. Rename the `.env.sample` file to `.env` and add the required variables.
-2. Modify `bin/webserver/Dockerfile` and resolve the comment on line 27.
+1. Rename the `.env.sample` file to `.env` and **add the required variables**.
+2. Modify `bin/webserver/Dockerfile` and resolve the comment on line 23.
 3. Create the `docker-compose.yml` file.
 4. Add a service that uses `bin/webserver/Dockerfile` named webserver, which maps
 `./webroot`, `./config/php/php.ini`, `./config/vhosts` and `./logs/apache2` in the
