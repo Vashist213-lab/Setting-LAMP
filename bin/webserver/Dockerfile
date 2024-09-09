@@ -1,4 +1,4 @@
-ARG PHP_VERSION=""
+ARG PHP_VERSION="7.4"
 FROM php:${PHP_VERSION}-apache-buster
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -27,6 +27,8 @@ RUN docker-php-ext-install pdo_mysql && \
     docker-php-ext-install curl && \
     docker-php-ext-install tokenizer && \
     docker-php-ext-install json && \
-    docker-php-ext-install zip
+    docker-php-ext-install zip &&\
+    docker-php-ext-install bcmath && \
+    docker-php-ext-install opcache
 
 RUN a2enmod rewrite headers
